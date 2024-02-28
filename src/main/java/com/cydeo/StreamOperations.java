@@ -41,6 +41,17 @@ public class StreamOperations {
 
 
 
+        System.out.println("============SKIP============");
+
+        // its gonna skip times that i provided
+
+        list.stream().filter(i->i%2==0).skip(1).forEach(System.out::println);// it didnt print first element
+
+
+
+
+
+
 
 
 
