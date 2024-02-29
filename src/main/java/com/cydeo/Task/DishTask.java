@@ -1,5 +1,10 @@
 package com.cydeo.Task;
 
+import java.util.Comparator;
+import java.util.Comparator;
+
+import static java.util.Comparator.comparing;
+
 public class DishTask {
     public static void main(String[] args) {
 
@@ -16,7 +21,11 @@ public class DishTask {
 
 
         System.out.println("=============print all dish name that are below 400 calories in sorted");
-        DishData.getAll().stream().filter(cal->cal.getCalories() < 400).map(Dish::getName).forEach(System.out::println);
+        DishData.getAll().stream().
+                filter(cal->cal.getCalories() < 400).
+                sorted(comparing(Dish::getCalories)).
+                map(Dish::getName).
+                forEach(System.out::println);
 
 
 
