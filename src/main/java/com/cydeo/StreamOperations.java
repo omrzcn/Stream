@@ -48,6 +48,12 @@ public class StreamOperations {
         list.stream().filter(i->i%2==0).skip(1).forEach(System.out::println);// it didnt print first element
 
 
+        System.out.println("============MAP============");
+
+        // we gonna use map to manipulate object with some actions
+
+        list.stream().filter(i->i % 2 == 0 ).map(i -> i * 3).forEach(System.out::println);
+//   list to stream---filtered--------------manupulated filtered elements-----sout
 
 
 
